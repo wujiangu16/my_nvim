@@ -45,7 +45,7 @@ vim.o.smartindent = true
 -- 历史命令最多保存1000条
 vim.o.history = 1000
 -- 显示空白字符
-vim.o.list = true
+vim.o.list = false
 -- 样式
 vim.o.background = "dark"
 vim.o.termguicolors = true

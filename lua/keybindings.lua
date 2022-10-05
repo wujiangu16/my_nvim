@@ -19,10 +19,10 @@ vim.api.nvim_set_keymap("n", "sh", ":sp<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "sc", ":close<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "so", ":only<CR>", {noremap = true, silent = true})
 -- 多窗口跳转
-vim.api.nvim_set_keymap("n", "<leader>h", "<C-w>h", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>hh", "<C-w>h", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>ll", "<C-w>l", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>jj", "<C-w>j", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>kk", "<C-w>k", {noremap = true, silent = true})
 
 -- 其他有用的绑定
 -- 使用 <C-u> 将光标所在单词转化为全大写
@@ -32,13 +32,13 @@ vim.api.nvim_set_keymap("i", "<C-l>", "<esc>viwuwa", {noremap = true, silent = t
 -- dw删除当前光标所在单词
 vim.api.nvim_set_keymap("n", "dw", "diw", {noremap = true, silent = true})
 -- 快速打开vimrc文件
--- vim.api.nvim_set_keymap("n", "<leader>ee", ":vs $MYVIMRC<CR>", {noremap = true, silent = true})-- 快速启用 vimrc
+vim.api.nvim_set_keymap("n", "<leader>ee", ":vs $MYVIMRC<CR>", {noremap = true, silent = true})-- 快速启用 vimrc
 -- 保存文件
 vim.api.nvim_set_keymap("n", "<leader>ss", ":w<CR>", {noremap = true, silent = true})
 -- 取消高亮
 vim.api.nvim_set_keymap("n", "<leader>hh", ":nohlsearch<CR>", {noremap = true, silent = true})
 -- 退出
-vim.api.nvim_set_keymap("n", "<leader>qq", ":qall<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>qq", ":q<CR>", {noremap = true, silent = true})
 -- 保存并退出
 vim.api.nvim_set_keymap("n", "<leader>wq", ":wqall<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>ww", ":wall<CR>", {noremap = true, silent = true})
