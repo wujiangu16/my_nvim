@@ -38,7 +38,7 @@ require('gitsigns').setup {
   yadm = {
     enable = false
   },
-}
+
 
 vim.api.nvim_set_keymap("n", "<leader>gv", ":Gitsigns preview_hunk<CR>", {noremap = true, silent = true})
 
