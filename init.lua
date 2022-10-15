@@ -20,6 +20,6 @@ require('plugin-config/autopairs')
 require('plugin-config/todo')
 require('plugin-config/gitsigns')
 require('lsp')
-
+require('lspsaga')
 
 vim.g.python_host_prog = "/opt/anaconda3/envs/pytorch/bin/python"
