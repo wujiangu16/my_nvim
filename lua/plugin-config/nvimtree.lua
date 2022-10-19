@@ -1,8 +1,4 @@
-require("nvim-tree").setup()
-
 require("nvim-tree").setup({
-    -- 关闭文件时，自动关闭
-    -- auto_close = true,
     filters = {
         -- 不显示 .git 目录中的内容
         custom = {
@@ -18,7 +14,18 @@ require("nvim-tree").setup({
     -- 以图标显示git 状态
     git = {
         enable = true
-    }
+    },
+     view = {
+    adaptive_size = true,
+    mappings = {
+      list = {
+        { key = "u", action = "dir_up" },
+      },
+    },
+  },
+  renderer = {
+    group_empty = true,
+  },
 })
 
 

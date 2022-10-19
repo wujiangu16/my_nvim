@@ -14,15 +14,15 @@ vim.api.nvim_set_keymap("n", "<C-f>", "10jzz", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<C-b>", "10kzz", {noremap = true, silent = true})
 
 -- 多窗口的打开与关闭
-vim.api.nvim_set_keymap("n", "sv", ":vsp<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "sh", ":sp<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "_", ":vsp<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "-", ":sp<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "sc", ":close<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "so", ":only<CR>", {noremap = true, silent = true})
 -- 多窗口跳转
-vim.api.nvim_set_keymap("n", "<leader>hh", "<C-w>h", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>ll", "<C-w>l", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>jj", "<C-w>j", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>kk", "<C-w>k", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "sh", "<C-w>h", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "sl", "<C-w>l", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "sj", "<C-w>j", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "sk", "<C-w>k", {noremap = true, silent = true})
 
 -- 其他有用的绑定
 -- 使用 <C-u> 将光标所在单词转化为全大写

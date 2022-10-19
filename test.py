@@ -8,3 +8,5 @@ torch.cuda.is_available()
 y = yu
 time.sleep()
 torch.cuda.is_available()
+
+np.loadtxt()

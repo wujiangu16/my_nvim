@@ -60,6 +60,7 @@ require('gitsigns').setup {
       return '<Ignore>'
     end, {expr=true})
 
+    -- taait
     -- Actions
     map({'n', 'v'}, '<leader>hs', ':Gitsigns stage_hunk<CR>')
     map({'n', 'v'}, '<leader>hr', ':Gitsigns reset_hunk<CR>')
