@@ -1,23 +1,33 @@
 -- 设置文件编码格式为 utf-8
 vim.g.encoding = "utf-8"
+
 -- 设置终端编码格式为 utf-8
 vim.o.termencoding = "utf-8"
+
 -- 开启语法高亮
 vim.o.syntax = "enable"
+
 -- 显示相对行号
 vim.o.relativenumber = true
--- 显示行号
+
+-- 显示行号F
 vim.o.number = true
+
 -- 高亮所在行
 vim.o.cursorline = true
+
 -- 自动换行
-vim.o.wrap = true
+vim.o.wrap = false
+
 -- 显示光标位置
 vim.o.ruler = true
+
 -- 边输入边搜索
 vim.o.incsearch = true
+
 -- 开启搜索匹配高亮
 vim.o.hlsearch = true
+
 -- 搜索时自行判断是否需要忽略大小写
 vim.o.smartcase = true
 
@@ -40,16 +50,15 @@ vim.bo.shiftwidth = 4
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 
+
 -- 设置自动折叠
 vim.o.smartindent = true
+
 -- 历史命令最多保存1000条
 vim.o.history = 1000
+
 -- 显示空白字符
-vim.o.list = false
--- 样式
-vim.o.background = "dark"
-vim.o.termguicolors = true
-vim.opt.termguicolors = true
+vim.o.list = true
 
 -- 允许使用鼠标
 vim.opt.mouse = "a"
@@ -58,5 +67,6 @@ vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 
 
-
-
+-- set python to conda env
+-- vim.g.python3_host_prog = "/opt/anaconda3/envs/pytorch/bin/python"
+-- vim.g.python_host_prog = "/opt/anaconda3/envs/pytorch/bin/python"

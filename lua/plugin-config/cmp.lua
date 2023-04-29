@@ -1,16 +1,14 @@
+
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 cmp.setup({
     -- 设置代码片段引擎，用于根据代码片段补全
     snippet = {
-      -- REQUIRED - you must specify a snippet engine
-      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-      end,
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body)
+        end,
     },
+
     window = {
     },
 
@@ -27,11 +25,17 @@ cmp.setup({
             c = cmp.mapping.close(),
         }),
 
-        -- 确认使用某个补全项
+        -- 默认不选择补全项
         ['<CR>'] = cmp.mapping.confirm({
-            select = true,
+            select = false,
             behavior = cmp.ConfirmBehavior.Replace
         }),
+
+        -- -- 确认使用某个补全项
+        -- ['<CR>'] = cmp.mapping.confirm({
+        --     select = true,
+        --     behavior = cmp.ConfirmBehavior.Replace
+        -- }),
 
         -- 向上翻页
         ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
@@ -85,3 +89,7 @@ cmp.setup({
     },
 })
 
+vim.cmd[[imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>']]
+vim.cmd[[smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>']]
+vim.cmd[[imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>']]
+vim.cmd[[smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>']]
